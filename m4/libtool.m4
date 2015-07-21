@@ -1343,7 +1343,7 @@ mips64*-*linux*)
   echo '[#]line '$LINENO' "configure"' > conftest.$ac_ext
   if AC_TRY_EVAL(ac_compile); then
     emul=elf
-    case `/usr/bin/file conftest.$ac_objext` in
+    case `file conftest.$ac_objext` in
       *32-bit*)
 	emul="${emul}32"
 	;;
@@ -1351,7 +1351,7 @@ mips64*-*linux*)
 	emul="${emul}64"
 	;;
     esac
-    case `/usr/bin/file conftest.$ac_objext` in
+    case `file conftest.$ac_objext` in
       *MSB*)
 	emul="${emul}btsmip"
 	;;
@@ -1359,7 +1359,7 @@ mips64*-*linux*)
 	emul="${emul}ltsmip"
 	;;
     esac
-    case `/usr/bin/file conftest.$ac_objext` in
+    case `file conftest.$ac_objext` in
       *N32*)
 	emul="${emul}n32"
 	;;

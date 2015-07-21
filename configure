@@ -7581,7 +7581,7 @@ mips64*-*linux*)
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
     emul=elf
-    case `/usr/bin/file conftest.$ac_objext` in
+    case `file conftest.$ac_objext` in
       *32-bit*)
 	emul="${emul}32"
 	;;
@@ -7589,7 +7589,7 @@ mips64*-*linux*)
 	emul="${emul}64"
 	;;
     esac
-    case `/usr/bin/file conftest.$ac_objext` in
+    case `file conftest.$ac_objext` in
       *MSB*)
 	emul="${emul}btsmip"
 	;;
@@ -7597,7 +7597,7 @@ mips64*-*linux*)
 	emul="${emul}ltsmip"
 	;;
     esac
-    case `/usr/bin/file conftest.$ac_objext` in
+    case `file conftest.$ac_objext` in
       *N32*)
 	emul="${emul}n32"
 	;;
